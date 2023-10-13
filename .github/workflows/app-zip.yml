@@ -51,7 +51,7 @@ jobs:
         git commit -m "Update App Auto version in XML file"
         git push -u origin master
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
 
     - name: Send message to Telegram group
       env:
