@@ -15,14 +15,14 @@ jobs:
     
     - name: Ensure build/auto directory exists
       run: |
-        mkdir -p build/auto
+        mkdir -p build/Auto
         mkdir -p App
       working-directory: ${{ github.workspace }}
       
     - name: Create Auto.zip
       run: |
         # Compress the files in the build/auto folder
-        cd build/auto
+        cd build/Auto
         zip -r Auto.zip .
         mv Auto.zip ../../App/Auto.zip
       working-directory: ${{ github.workspace }}
