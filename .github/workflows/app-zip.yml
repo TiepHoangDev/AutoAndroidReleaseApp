@@ -12,7 +12,13 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
+    
+    - name: Ensure build/auto directory exists
+      run: |
+        mkdir -p build/auto
+        mkdir -p App
+      shell: bash
+      
     - name: Create Auto.zip
       run: |
         # Compress the files in the build/auto folder
