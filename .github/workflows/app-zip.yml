@@ -1,0 +1,55 @@
+name: Build and Deploy App Auto
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Create Auto.zip
+      run: |
+        # Compress the files in the build/auto folder
+        cd build/auto
+        zip -r Auto.zip .
+        mv Auto.zip ../../App/Auto.zip
+      shell: bash
+
+    - name: Get commit message
+      run: |
+        # Get the commit message for the latest commit on the master branch
+        COMMIT_MESSAGE=$(git log -1 --pretty=format:%s)
+        echo $COMMIT_MESSAGE > commit_message.txt
+      shell: bash
+
+    - name: Update XML
+      run: |
+        # Replace the <Version>xxx</Version> with the commit message in your XML file
+        XML_FILE=info/version_app.xml
+        COMMIT_MESSAGE=$(cat commit_message.txt)
+        sed -i "s|<Version>.+</Version>|<Version>$COMMIT_MESSAGE</Version>|" $XML_FILE
+      shell: bash
+
+    - name: Commit and push changes
+      run: |
+        git config user.email "tiephoang.dev@gmail.com"
+        git config user.name "tiephoang.dev@gmail.com"
+        git add .
+        git commit -m "Update App Auto version in XML file"
+        git push
+      shell: bash
+
+    - name: Send message to Telegram group
+      env:
+        TELEGRAM_API_TOKEN: ${{ secrets.TELEGRAM_API_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        MESSAGE="App Auto deployment: $COMMIT_MESSAGE"
+        curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_API_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID" -d "text=$MESSAGE"
+      shell: bash
