@@ -25,6 +25,11 @@ jobs:
         cd build/Auto
         zip -r Auto.zip .
         mv Auto.zip ../../App/Auto.zip
+        
+        cd ../Scripter
+        zip -r Scripter.zip .
+        mv Scripter.zip ../../App/Scripter.zip
+        
       working-directory: ${{ github.workspace }}
 
     - name: Get commit message
@@ -34,10 +39,18 @@ jobs:
         echo $COMMIT_MESSAGE > commit_message.txt
       working-directory: ${{ github.workspace }}
 
-    - name: Update XML
+    - name: Update version_app XML
       run: |
         # Replace the <Version>xxx</Version> with the commit message in your XML file
         XML_FILE=info/version_app.xml
+        COMMIT_MESSAGE=$(cat commit_message.txt)
+        sed -i "s|<Version>.+</Version>|<Version>$COMMIT_MESSAGE</Version>|" $XML_FILE
+      working-directory: ${{ github.workspace }}
+      
+    - name: Update version_scripter XML
+      run: |
+        # Replace the <Version>xxx</Version> with the commit message in your XML file
+        XML_FILE=info/version_scripter.xml
         COMMIT_MESSAGE=$(cat commit_message.txt)
         sed -i "s|<Version>.+</Version>|<Version>$COMMIT_MESSAGE</Version>|" $XML_FILE
       working-directory: ${{ github.workspace }}
