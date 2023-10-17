@@ -1,0 +1,355 @@
+ags2-w09
+ags2-w09hn
+alp-al00
+alp-l09
+alp-l29
+ane-al00
+ane-lx1
+bah-w09
+bah2-al10
+bah2-w09
+bkl-l09
+bla-a09
+bla-al00
+bla-l09
+bla-l29
+clt-al00
+clt-al01
+clt-l04
+clt-l09
+clt-l29
+cmr-al09
+cmr-w09
+cmr-w19
+col-al10
+col-l29
+cpn-w09
+d-02k
+ele-l04
+ele-l09
+ele-l29
+ele-tl00
+eml-l09
+eml-l29
+evr-l29
+evr-n29
+fig-al00
+fig-lx1
+hma-l09
+hma-l29
+hry-al00
+hry-al00a
+hry-al00t
+hry-al00ta
+hry-lx1
+hry-lx1meb
+hry-lx1t
+hry-lx2
+hw-02l
+hwi-al00
+hwi-tl00
+hwv32
+hwv33
+jdn2-w09
+jdn2-w09hn
+jsn-al00a
+jsn-l21
+jsn-l22
+jsn-l23
+jsn-l42
+jsn-tl00
+leo-bx9
+lld-al00
+lld-al10
+lya-al00
+lya-al10
+lya-l09
+lya-l29
+mar-al00
+mar-lx1a
+mar-lx1b
+mar-lx1m
+mar-lx2
+mar-lx2b
+mar-lx2j
+mar-lx3a
+mar-lx3am
+mar-lx3bm
+mar-tl00
+mrd-lx1
+nexus 6p
+pct-al10
+pct-l29
+pot-al00
+pot-al00a
+pot-al10
+pot-lx1
+pot-lx1af
+pot-lx1t
+pot-lx2j
+pot-lx3
+scm-w09
+sht-al09
+sht-w09
+sne-lx1
+sne-lx2
+sne-lx3
+stk-l21
+stk-l22
+stk-lx1
+stk-lx3
+stk-tl00
+tny-tl00
+vce-l22
+vky-l09
+vog-al10
+vog-l04
+vog-l09
+vog-l29
+yal-al00
+yal-al10
+yal-l21
+yal-l41
+gt-n7100
+sm-a305gn
+sm-a505fn
+sm-a505x
+sm-a515x
+sm-a705x
+sm-a715x
+sm-a805x
+sm-f707u1
+sm-f711u1
+sm-f907b
+sm-f916u1
+sm-f926u1
+sm-g770x
+sm-g781u1
+sm-g8850
+sm-g887n
+sm-g935l
+sm-g9500
+sm-g9550
+sm-g970x
+sm-g970xu
+sm-g973x
+sm-g973xu
+sm-g975n
+sm-g975x
+sm-g975xu
+sm-g991u1
+sm-g996u1
+sm-g998u1
+sm-j700h
+sm-j737p
+sm-n770x
+sm-n9005
+sm-n970x
+sm-n970xu
+sm-n975x
+sm-n975xu
+sm-n976xu
+sm-n981u1
+sm-n986u1
+sm-p200
+sm-p610
+sm-p610x
+sm-p613
+sm-p617
+sm-p900
+sm-p905
+sm-t217s
+sm-t217t
+sm-t220
+sm-t290
+sm-t297
+sm-t307u
+sm-t320
+sm-t325
+sm-t330
+sm-t331
+sm-t335
+sm-t350
+sm-t380
+sm-t387aa
+sm-t387p
+sm-t387r4
+sm-t387t
+sm-t387v
+sm-t387vk
+sm-t387w
+sm-t390
+sm-t397u
+sm-t500
+sm-t503
+sm-t510
+sm-t510x
+sm-t517
+sm-t517p
+sm-t525
+sm-t530
+sm-t530nu
+sm-t531
+sm-t535
+sm-t540
+sm-t547
+sm-t547u
+sm-t550
+sm-t560nu
+sm-t570
+sm-t577
+sm-t580
+sm-t590
+sm-t597
+sm-t597p
+sm-t597v
+sm-t597w
+sm-t630
+sm-t710
+sm-t713
+sm-t720
+sm-t720x
+sm-t725
+sm-t727
+sm-t727a
+sm-t727r4
+sm-t727u
+sm-t727v
+sm-t733
+sm-t810
+sm-t813
+sm-t820
+sm-t827
+sm-t827r4
+sm-t827v
+sm-t830
+sm-t835n
+sm-t837
+sm-t837a
+sm-t837p
+sm-t837r4
+sm-t837t
+sm-t837v
+sm-t860
+sm-t860x
+sm-t867
+sm-t867r4
+sm-t867u
+sm-t867v
+sm-t870
+sm-t878u
+sm-t970
+sm-t978u
+sm-x200
+sm-x510
+sm-x610
+sm-x700
+sm-x710
+sm-x800
+sm-x810
+sm-x900
+801lv
+lenovo l18081
+lenovo l78011
+lenovo tb-7305f
+lenovo tb-7306f
+lenovo tb-8304f1
+lenovo tb-8504f
+lenovo tb-8504x
+lenovo tb-8505f
+lenovo tb-8505fs
+lenovo tb-8505x
+lenovo tb-8505xc
+lenovo tb-8505xs
+lenovo tb-8506f
+lenovo tb-8506fs
+lenovo tb-8703f
+lenovo tb-8704f
+lenovo tb-8705f
+lenovo tb-j606f
+lenovo tb-j607z
+lenovo tb-j616f
+lenovo tb-j706f
+lenovo tb-j706l
+lenovo tb-q706f
+lenovo tb-x304f
+lenovo tb-x306f
+lenovo tb-x306fa
+lenovo tb-x306x
+lenovo tb-x505f
+lenovo tb-x505l
+lenovo tb-x505x
+lenovo tb-x605f
+lenovo tb-x605fc
+lenovo tb-x605l
+lenovo tb-x605lc
+lenovo tb-x606f
+lenovo tb-x606fa
+lenovo tb-x606v
+lenovo tb-x606x
+lenovo tb-x606xa
+lenovo tb-x6c6f
+lenovo tb-x6c6nbf
+lenovo tb-x704f
+lenovo tb-x704l
+lenovo tb-x705f
+lenovo tb-x705l
+lenovo tb125fu
+lenovo tb128fu
+lenovo tb328fu
+lenovo yoga tab 11
+lenovo yt-j706f
+lenovo yt-k606f
+lenovo yt-x705f
+lenovo yt-x705l
+lgsi
+lifetab e1041x
+lifetab e1042x
+lifetab e1043x
+lifetab e1053x
+lifetab e1070x
+lifetab e1071x
+lifetab p1071x
+tb132fu
+tb300fu
+tb301fu
+tb310fu
+tb328fu
+tb330fu
+tb350fu
+tb370fu
+tb570fu
+vr-1541f
+yt-k606f
+10a30q
+901lg
+lg watch sport
+lg-h870ds
+lg-h990
+lg-us996
+lg-v426
+lgm-g600k
+lm-g710
+lm-g820
+lm-g820n
+lm-k200
+lm-k300
+lm-k410
+lm-k500
+lm-k510
+lm-q610.fgn
+lm-q720
+lm-q910
+lm-q927l
+lm-t600
+lm-t605
+lm-v405
+lm-v450
+lm-v500n
+lm-v600
+lm-x220n
+lm-x420
+lm-x525
+nexus 5x
+vs988
+x5-lg
