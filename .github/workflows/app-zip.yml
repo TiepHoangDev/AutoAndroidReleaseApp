@@ -32,27 +32,20 @@ jobs:
         
       working-directory: ${{ github.workspace }}
 
-    - name: Get commit message
+    - name: Get commit message and Update version_app XML
       run: |
-        # Get the commit message for the latest commit on the master branch
-        COMMIT_MESSAGE=$(git log -1 --pretty=format:%s)
-        echo $COMMIT_MESSAGE > commit_message.txt
-      working-directory: ${{ github.workspace }}
-
-    - name: Update version_app XML
-      run: |
-        # Replace the <Version>xxx</Version> with the commit message in your XML file
+        FILE_VERSION=build/Auto/version.txt
         XML_FILE=info/version_app.xml
-        COMMIT_MESSAGE=$(cat commit_message.txt)
-        sed -i "s|<Version>.+</Version>|<Version>$COMMIT_MESSAGE</Version>|" $XML_FILE
+        VERSION=$(iconv -f UTF-16LE -t UTF-8 $FILE_VERSION)
+        sed -r -i "s|<Version>.+<\/Version>|<Version>$VERSION</Version>|" $XML_FILE
       working-directory: ${{ github.workspace }}
-      
-    - name: Update version_scripter XML
+     
+    - name: Get commit message and Update version_scripter XML
       run: |
-        # Replace the <Version>xxx</Version> with the commit message in your XML file
+        FILE_VERSION=build/Scripter/version.txt
         XML_FILE=info/version_scripter.xml
-        COMMIT_MESSAGE=$(cat commit_message.txt)
-        sed -i "s|<Version>.+</Version>|<Version>$COMMIT_MESSAGE</Version>|" $XML_FILE
+        VERSION=$(iconv -f UTF-16LE -t UTF-8 $FILE_VERSION)
+        sed -r -i "s|<Version>.+<\/Version>|<Version>$VERSION</Version>|" $XML_FILE
       working-directory: ${{ github.workspace }}
 
     - name: Commit and push changes
@@ -71,6 +64,6 @@ jobs:
         TELEGRAM_API_TOKEN: ${{ secrets.TELEGRAM_API_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       run: |
-        MESSAGE="App Auto deployment: $COMMIT_MESSAGE"
+        MESSAGE="App Auto deployment new version $COMMIT_MESSAGE"
         curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_API_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID" -d "text=$MESSAGE"
       shell: bash
