@@ -36,16 +36,22 @@ jobs:
       run: |
         FILE_VERSION=build/Auto/version.txt
         XML_FILE=info/version_app.xml
-        VERSION=$(iconv -f UTF-16LE -t UTF-8 $FILE_VERSION)
-        sed -r -i "s|<Version>.+<\/Version>|<Version>$VERSION</Version>|" $XML_FILE
+        TEXT=$(iconv -f UTF-16LE -t UTF-8 $FILE_VERSION)
+        TEXT=$(echo $TEXT | sed -r 's/\s//g')
+        NEW_VERSION="<Version>$TEXT</Version>"
+        echo $NEW_VERSION
+        sed -r -i "s|<Version>.*<\/Version>|$NEW_VERSION|" $XML_FILE
       working-directory: ${{ github.workspace }}
      
     - name: Get commit message and Update version_scripter XML
       run: |
         FILE_VERSION=build/Scripter/version.txt
         XML_FILE=info/version_scripter.xml
-        VERSION=$(iconv -f UTF-16LE -t UTF-8 $FILE_VERSION)
-        sed -r -i "s|<Version>.+<\/Version>|<Version>$VERSION</Version>|" $XML_FILE
+        TEXT=$(iconv -f UTF-16LE -t UTF-8 $FILE_VERSION)
+        TEXT=$(echo $TEXT | sed -r 's/\s//g')
+        NEW_VERSION="<Version>$TEXT</Version>"
+        echo $NEW_VERSION
+        sed -r -i "s|<Version>.*<\/Version>|$NEW_VERSION|" $XML_FILE
       working-directory: ${{ github.workspace }}
 
     - name: Commit and push changes
