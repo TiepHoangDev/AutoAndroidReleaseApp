@@ -3,10 +3,11 @@ on:
   push:
     branches:
       - master
-env: MESSAGE=''
 jobs:
   build:
     runs-on: ubuntu-latest
+    env: 
+        MESSAGE:''
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
