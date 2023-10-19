@@ -62,11 +62,10 @@ jobs:
         env:
           TELEGRAM_API_TOKEN: ${{ secrets.TELEGRAM_API_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          version_app_output: ${{ steps.version_app.outputs.stdout }}
+          version_scripter_output: ${{ steps.version_scripter.outputs.stdout }}
         run: |
           MESSAGE="${{ steps.tele.outputs.version_app_output }} ${{ steps.tele.outputs.version_scripter_output }}"
           curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_API_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID" -d "text=$MESSAGE"
         shell: bash
-        env:
-            version_app_output: ${{ steps.version_app.outputs.stdout }}
-            version_scripter_output: ${{ steps.version_scripter.outputs.stdout }}
         working-directory: ${{ github.workspace }}
