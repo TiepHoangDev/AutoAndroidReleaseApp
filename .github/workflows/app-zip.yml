@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+env:
+  MESSAGE=""
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -40,6 +43,7 @@ jobs:
         TEXT=$(echo $TEXT | sed -r 's/\s*//g')
         NEW_VERSION="<Version>$TEXT</Version>"
         sed -r -i "s|<Version>.*<\/Version>|$NEW_VERSION|" $XML_FILE
+        MESSAGE=$(echo "Auto: $TEXT")
       working-directory: ${{ github.workspace }}
      
     - name: Get commit message and Update version_scripter XML
@@ -50,6 +54,7 @@ jobs:
         TEXT=$(echo $TEXT | sed -r 's/\s*//g')
         NEW_VERSION="<Version>$TEXT</Version>"
         sed -r -i "s|<Version>.*<\/Version>|$NEW_VERSION|" $XML_FILE
+        MESSAGE=$(echo "$MESSAGE Scripter: $TEXT")
       working-directory: ${{ github.workspace }}
 
     - name: Commit and push changes
@@ -68,6 +73,7 @@ jobs:
         TELEGRAM_API_TOKEN: ${{ secrets.TELEGRAM_API_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       run: |
-        MESSAGE="App Auto deployment new version $COMMIT_MESSAGE"
+        echo MESSAGE
         curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_API_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID" -d "text=$MESSAGE"
       shell: bash
+      working-directory: ${{ github.workspace }}
