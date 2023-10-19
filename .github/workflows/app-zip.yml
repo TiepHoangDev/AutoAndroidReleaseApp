@@ -6,8 +6,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env: 
-        MESSAGE:''
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -28,6 +26,7 @@ jobs:
           mv Scripter.zip ../../App/Scripter.zip
         working-directory: ${{ github.workspace }}
       - name: Get commit message and Update version_app XML
+        id: version_app
         run: |
           FILE_VERSION=build/Auto/version.txt
           XML_FILE=info/version_app.xml
@@ -35,9 +34,10 @@ jobs:
           TEXT=$(echo $TEXT | sed -r 's/\s*//g')
           NEW_VERSION="<Version>$TEXT</Version>"
           sed -r -i "s|<Version>.*<\/Version>|$NEW_VERSION|" $XML_FILE
-          MESSAGE=$(echo "Auto: $TEXT")
+          echo "Auto: $TEXT"
         working-directory: ${{ github.workspace }}
       - name: Get commit message and Update version_scripter XML
+        id: version_scripter
         run: |
           FILE_VERSION=build/Scripter/version.txt
           XML_FILE=info/version_scripter.xml
@@ -45,7 +45,7 @@ jobs:
           TEXT=$(echo $TEXT | sed -r 's/\s*//g')
           NEW_VERSION="<Version>$TEXT</Version>"
           sed -r -i "s|<Version>.*<\/Version>|$NEW_VERSION|" $XML_FILE
-          MESSAGE=$(echo "$MESSAGE Scripter: $TEXT")
+          echo "Scripter: $TEXT"
         working-directory: ${{ github.workspace }}
       - name: Commit and push changes
         run: |
@@ -58,11 +58,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
       - name: Send message to Telegram group
+        id: tele
         env:
           TELEGRAM_API_TOKEN: ${{ secrets.TELEGRAM_API_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          echo $MESSAGE
+          MESSAGE="${{ steps.tele.outputs.version_app_output }} ${{ steps.tele.outputs.version_scripter_output }}"
           curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_API_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID" -d "text=$MESSAGE"
         shell: bash
+        env:
+            version_app_output: ${{ steps.version_app.outputs.stdout }}
+            version_scripter_output: ${{ steps.version_scripter.outputs.stdout }}
         working-directory: ${{ github.workspace }}
