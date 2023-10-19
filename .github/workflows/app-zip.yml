@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  MESSAGE=""
+  MESSAGE=''
 
 jobs:
   build:
