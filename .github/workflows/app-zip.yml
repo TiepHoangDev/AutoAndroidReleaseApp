@@ -1,79 +1,67 @@
 name: Build and Deploy App Auto
-
 on:
   push:
     branches:
       - master
-
-env:
-  MESSAGE=''
-
+env: MESSAGE=''
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    
-    - name: Ensure build/auto directory exists
-      run: |
-        mkdir -p build/Auto
-        mkdir -p App
-      working-directory: ${{ github.workspace }}
-      
-    - name: Create Auto.zip
-      run: |
-        # Compress the files in the build/auto folder
-        cd build/Auto
-        zip -r Auto.zip .
-        mv Auto.zip ../../App/Auto.zip
-        
-        cd ../Scripter
-        zip -r Scripter.zip .
-        mv Scripter.zip ../../App/Scripter.zip
-        
-      working-directory: ${{ github.workspace }}
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Ensure build/auto directory exists
+        run: |
+          mkdir -p build/Auto
+          mkdir -p App
+        working-directory: ${{ github.workspace }}
+      - name: Create Auto.zip
+        run: |
+          # Compress the files in the build/auto folder
+          cd build/Auto
+          zip -r Auto.zip .
+          mv Auto.zip ../../App/Auto.zip
 
-    - name: Get commit message and Update version_app XML
-      run: |
-        FILE_VERSION=build/Auto/version.txt
-        XML_FILE=info/version_app.xml
-        TEXT=$(cat $FILE_VERSION)
-        TEXT=$(echo $TEXT | sed -r 's/\s*//g')
-        NEW_VERSION="<Version>$TEXT</Version>"
-        sed -r -i "s|<Version>.*<\/Version>|$NEW_VERSION|" $XML_FILE
-        MESSAGE=$(echo "Auto: $TEXT")
-      working-directory: ${{ github.workspace }}
-     
-    - name: Get commit message and Update version_scripter XML
-      run: |
-        FILE_VERSION=build/Scripter/version.txt
-        XML_FILE=info/version_scripter.xml
-        TEXT=$(cat $FILE_VERSION)
-        TEXT=$(echo $TEXT | sed -r 's/\s*//g')
-        NEW_VERSION="<Version>$TEXT</Version>"
-        sed -r -i "s|<Version>.*<\/Version>|$NEW_VERSION|" $XML_FILE
-        MESSAGE=$(echo "$MESSAGE Scripter: $TEXT")
-      working-directory: ${{ github.workspace }}
-
-    - name: Commit and push changes
-      run: |
-        git config user.email "tiephoang.dev@gmail.com"
-        git config user.name "tiephoang.dev@gmail.com"
-        git checkout master
-        git add .
-        git commit -m "Update App Auto version in XML file"
-        git push -u origin master
-      env:
-        GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
-
-    - name: Send message to Telegram group
-      env:
-        TELEGRAM_API_TOKEN: ${{ secrets.TELEGRAM_API_TOKEN }}
-        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      run: |
-        echo MESSAGE
-        curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_API_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID" -d "text=$MESSAGE"
-      shell: bash
-      working-directory: ${{ github.workspace }}
+          cd ../Scripter
+          zip -r Scripter.zip .
+          mv Scripter.zip ../../App/Scripter.zip
+        working-directory: ${{ github.workspace }}
+      - name: Get commit message and Update version_app XML
+        run: |
+          FILE_VERSION=build/Auto/version.txt
+          XML_FILE=info/version_app.xml
+          TEXT=$(cat $FILE_VERSION)
+          TEXT=$(echo $TEXT | sed -r 's/\s*//g')
+          NEW_VERSION="<Version>$TEXT</Version>"
+          sed -r -i "s|<Version>.*<\/Version>|$NEW_VERSION|" $XML_FILE
+          MESSAGE=$(echo "Auto: $TEXT")
+        working-directory: ${{ github.workspace }}
+      - name: Get commit message and Update version_scripter XML
+        run: |
+          FILE_VERSION=build/Scripter/version.txt
+          XML_FILE=info/version_scripter.xml
+          TEXT=$(cat $FILE_VERSION)
+          TEXT=$(echo $TEXT | sed -r 's/\s*//g')
+          NEW_VERSION="<Version>$TEXT</Version>"
+          sed -r -i "s|<Version>.*<\/Version>|$NEW_VERSION|" $XML_FILE
+          MESSAGE=$(echo "$MESSAGE Scripter: $TEXT")
+        working-directory: ${{ github.workspace }}
+      - name: Commit and push changes
+        run: |
+          git config user.email "tiephoang.dev@gmail.com"
+          git config user.name "tiephoang.dev@gmail.com"
+          git checkout master
+          git add .
+          git commit -m "Update App Auto version in XML file"
+          git push -u origin master
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
+      - name: Send message to Telegram group
+        env:
+          TELEGRAM_API_TOKEN: ${{ secrets.TELEGRAM_API_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo $MESSAGE
+          curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_API_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID" -d "text=$MESSAGE"
+        shell: bash
+        working-directory: ${{ github.workspace }}
