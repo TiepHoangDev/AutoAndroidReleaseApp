@@ -1,0 +1,114 @@
+2023-10-26 15:14:58.2609|ERROR|ClassHelper.LogHelper|System.IO.FileNotFoundException: Could not load file or assembly 'UpdaterLibrary.XmlSerializers, Version=2023.10.26.1451, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+File name: 'UpdaterLibrary.XmlSerializers, Version=2023.10.26.1451, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+
+=== Pre-bind state information ===
+LOG: DisplayName = UpdaterLibrary.XmlSerializers, Version=2023.10.26.1451, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL
+ (Fully-specified)
+LOG: Appbase = file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/
+LOG: Initial PrivatePath = NULL
+Calling assembly : System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: D:\PROJECTS\AutoAndroid\AutoAndroidReleaseApp\AutoAndroidReleaseApp\build\Auto\AutoRegFbLite.exe.Config
+LOG: Using host configuration file: 
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers.DLL.
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers/UpdaterLibrary.XmlSerializers.DLL.
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers.EXE.
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers/UpdaterLibrary.XmlSerializers.EXE.
+
+2023-10-26 15:14:58.3128|ERROR|ClassHelper.LogHelper|System.IO.FileNotFoundException: Could not load file or assembly 'UpdaterLibrary.XmlSerializers' or one of its dependencies. The system cannot find the file specified.
+File name: 'UpdaterLibrary.XmlSerializers'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+
+=== Pre-bind state information ===
+LOG: DisplayName = UpdaterLibrary.XmlSerializers
+ (Partial)
+WRN: Partial binding information was supplied for an assembly:
+WRN: Assembly Name: UpdaterLibrary.XmlSerializers | Domain ID: 1
+WRN: A partial bind occurs when only part of the assembly display name is provided.
+WRN: This might result in the binder loading an incorrect assembly.
+WRN: It is recommended to provide a fully specified textual identity for the assembly,
+WRN: that consists of the simple name, version, culture, and public key token.
+WRN: See whitepaper http://go.microsoft.com/fwlink/?LinkId=109270 for more information and common solutions to this issue.
+LOG: Appbase = file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/
+LOG: Initial PrivatePath = NULL
+Calling assembly : System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: D:\PROJECTS\AutoAndroid\AutoAndroidReleaseApp\AutoAndroidReleaseApp\build\Auto\AutoRegFbLite.exe.Config
+LOG: Using host configuration file: 
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers.DLL.
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers/UpdaterLibrary.XmlSerializers.DLL.
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers.EXE.
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers/UpdaterLibrary.XmlSerializers.EXE.
+
+2023-10-26 15:15:50.5845|ERROR|ClassHelper.LogHelper|System.InvalidOperationException: This API is not available when AppDomain Resource Monitoring is not turned on.
+   at System.AppDomain.get_MonitoringSurvivedMemorySize()
+2023-10-26 15:15:50.6475|ERROR|ClassHelper.LogHelper|System.InvalidOperationException: This API is not available when AppDomain Resource Monitoring is not turned on.
+   at System.AppDomain.get_MonitoringTotalAllocatedMemorySize()
+2023-10-26 15:15:50.6475|ERROR|ClassHelper.LogHelper|System.InvalidOperationException: This API is not available when AppDomain Resource Monitoring is not turned on.
+   at System.AppDomain.get_MonitoringTotalProcessorTime()
+2023-10-26 15:16:31.5111|ERROR|ClassHelper.LogHelper|System.IO.FileNotFoundException: Could not load file or assembly 'UpdaterLibrary.XmlSerializers, Version=2023.10.26.1451, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+File name: 'UpdaterLibrary.XmlSerializers, Version=2023.10.26.1451, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+
+=== Pre-bind state information ===
+LOG: DisplayName = UpdaterLibrary.XmlSerializers, Version=2023.10.26.1451, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL
+ (Fully-specified)
+LOG: Appbase = file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/
+LOG: Initial PrivatePath = NULL
+Calling assembly : System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: D:\PROJECTS\AutoAndroid\AutoAndroidReleaseApp\AutoAndroidReleaseApp\build\Auto\AutoRegFbLite.exe.Config
+LOG: Using host configuration file: 
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers.DLL.
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers/UpdaterLibrary.XmlSerializers.DLL.
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers.EXE.
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers/UpdaterLibrary.XmlSerializers.EXE.
+
+2023-10-26 15:16:54.9714|ERROR|ClassHelper.LogHelper|System.InvalidOperationException: Method may only be called on a Type for which Type.IsGenericParameter is true.
+   at System.RuntimeType.get_DeclaringMethod()
+2023-10-26 15:16:55.0054|ERROR|ClassHelper.LogHelper|System.InvalidOperationException: Method may only be called on a Type for which Type.IsGenericParameter is true.
+   at System.RuntimeType.get_GenericParameterAttributes()
+2023-10-26 15:16:55.0054|ERROR|ClassHelper.LogHelper|System.InvalidOperationException: Method may only be called on a Type for which Type.IsGenericParameter is true.
+   at System.RuntimeType.get_GenericParameterPosition()
+2023-10-26 15:17:14.9158|ERROR|ClassHelper.LogHelper|System.IO.FileNotFoundException: Could not load file or assembly 'UpdaterLibrary.XmlSerializers' or one of its dependencies. The system cannot find the file specified.
+File name: 'UpdaterLibrary.XmlSerializers'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+
+=== Pre-bind state information ===
+LOG: DisplayName = UpdaterLibrary.XmlSerializers
+ (Partial)
+WRN: Partial binding information was supplied for an assembly:
+WRN: Assembly Name: UpdaterLibrary.XmlSerializers | Domain ID: 1
+WRN: A partial bind occurs when only part of the assembly display name is provided.
+WRN: This might result in the binder loading an incorrect assembly.
+WRN: It is recommended to provide a fully specified textual identity for the assembly,
+WRN: that consists of the simple name, version, culture, and public key token.
+WRN: See whitepaper http://go.microsoft.com/fwlink/?LinkId=109270 for more information and common solutions to this issue.
+LOG: Appbase = file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/
+LOG: Initial PrivatePath = NULL
+Calling assembly : System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: D:\PROJECTS\AutoAndroid\AutoAndroidReleaseApp\AutoAndroidReleaseApp\build\Auto\AutoRegFbLite.exe.Config
+LOG: Using host configuration file: 
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers.DLL.
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers/UpdaterLibrary.XmlSerializers.DLL.
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers.EXE.
+LOG: Attempting download of new URL file:///D:/PROJECTS/AutoAndroid/AutoAndroidReleaseApp/AutoAndroidReleaseApp/build/Auto/UpdaterLibrary.XmlSerializers/UpdaterLibrary.XmlSerializers.EXE.
+

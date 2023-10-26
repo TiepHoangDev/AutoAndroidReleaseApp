@@ -1,0 +1,89 @@
+2023-10-24 00:43:34.5723|ERROR|ClassHelper.LogHelper|System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at AndroidAuto.Models.Implements.CheckerAutoAction.<>c__DisplayClass27_0.<<RunAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AndroidAuto.Models.ModelEntitys.AutoState.<Invoke>d__13.MoveNext()
+2023-10-24 00:43:34.6699|ERROR|ClassHelper.LogHelper|System.Exception: Failed on step [74]:  Checker
+   at AndroidAuto.Models.Implements.ScriptAuto.<>c__DisplayClass17_0.<<RunAllAt>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AndroidAuto.Models.ModelEntitys.AutoState.<Invoke>d__13.MoveNext()
+2023-10-24 00:43:51.2283|ERROR|ClassHelper.LogHelper|System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at AndroidAuto.Models.Implements.DelayAutoAction.<>c__DisplayClass6_0.<<RunAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AndroidAuto.Models.ModelEntitys.AutoState.<Invoke>d__13.MoveNext()
+2023-10-24 00:43:51.2420|ERROR|ClassHelper.LogHelper|System.Exception: Failed on step [10]: Delay 00:00:00.1000000
+   at AndroidAuto.Models.Implements.ScriptAuto.<>c__DisplayClass17_0.<<RunAllAt>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AndroidAuto.Models.ModelEntitys.AutoState.<Invoke>d__13.MoveNext()
+2023-10-24 00:47:18.0528|ERROR|ClassHelper.LogHelper|System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at AndroidAuto.Models.Implements.CheckerAutoAction.<>c__DisplayClass27_0.<<RunAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AndroidAuto.Models.ModelEntitys.AutoState.<Invoke>d__13.MoveNext()
+2023-10-24 00:47:18.0528|ERROR|ClassHelper.LogHelper|System.Exception: Failed on step [74]:  Checker
+   at AndroidAuto.Models.Implements.ScriptAuto.<>c__DisplayClass17_0.<<RunAllAt>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AndroidAuto.Models.ModelEntitys.AutoState.<Invoke>d__13.MoveNext()
+2023-10-24 01:05:50.2573|ERROR|ClassHelper.LogHelper|System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at AndroidAuto.Models.Implements.ClickImageAutoAction.<>c__DisplayClass11_0.<<RunAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AndroidAuto.Models.ModelEntitys.AutoState.<Invoke>d__13.MoveNext()
+2023-10-24 01:05:50.4291|ERROR|ClassHelper.LogHelper|System.Exception: Failed on step [75]: click sau daf Click image
+   at AndroidAuto.Models.Implements.ScriptAuto.<>c__DisplayClass17_0.<<RunAllAt>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AndroidAuto.Models.ModelEntitys.AutoState.<Invoke>d__13.MoveNext()
+2023-10-24 01:08:01.4174|ERROR|ClassHelper.LogHelper|System.Exception: no any action in this script!
+   at AndroidAuto.Models.Implements.ScriptAuto.<>c__DisplayClass17_0.<<RunAllAt>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AndroidAuto.Models.ModelEntitys.AutoState.<Invoke>d__13.MoveNext()
+2023-10-24 01:08:01.4730|ERROR|ClassHelper.LogHelper|System.Exception: ----[ Checker] Run script when MATCHED FAIL.
+   at AndroidAuto.Models.Implements.CheckerAutoAction.<>c__DisplayClass27_0.<<RunAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AndroidAuto.Models.ModelEntitys.AutoState.<Invoke>d__13.MoveNext()
+2023-10-24 01:08:01.5765|ERROR|ClassHelper.LogHelper|System.Exception: Failed on step [74]:  Checker
+   at AndroidAuto.Models.Implements.ScriptAuto.<>c__DisplayClass17_0.<<RunAllAt>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AndroidAuto.Models.ModelEntitys.AutoState.<Invoke>d__13.MoveNext()
